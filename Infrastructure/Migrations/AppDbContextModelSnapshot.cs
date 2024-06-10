@@ -48,7 +48,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("INT_CompetenceCategory");
+                    b.ToTable("INT_CompetenceCategory", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.INT.INT_ProjectImage", b =>
@@ -87,7 +87,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("INT_ProjectImage");
+                    b.ToTable("INT_ProjectImage", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.INT.INT_ProjectLangage", b =>
@@ -116,7 +116,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("INT_ProjectLangage");
+                    b.ToTable("INT_ProjectLangage", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.INT.INT_ProjectLink", b =>
@@ -151,7 +151,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("INT_ProjectLink");
+                    b.ToTable("INT_ProjectLink", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.INT.INT_ProjetAPI", b =>
@@ -174,7 +174,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("INT_ProjetAPI");
+                    b.ToTable("INT_ProjetAPI", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.PRO.PRO_Company", b =>
@@ -203,7 +203,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PRO_Company");
+                    b.ToTable("PRO_Company", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.SYS.SYS_API", b =>
@@ -226,7 +226,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SYS_API");
+                    b.ToTable("SYS_API", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.SYS.SYS_Langage", b =>
@@ -249,7 +249,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SYS_Langage");
+                    b.ToTable("SYS_Langage", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.SYS.SYS_NavBar", b =>
@@ -265,7 +265,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Name");
 
-                    b.ToTable("SYS_NavBar");
+                    b.ToTable("SYS_NavBar", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.SYS.SYS_Settings", b =>
@@ -279,7 +279,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Name");
 
-                    b.ToTable("SYS_Settings");
+                    b.ToTable("SYS_Settings", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.SYS.SYS_Statut", b =>
@@ -303,7 +303,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Name");
 
-                    b.ToTable("SYS_Statut");
+                    b.ToTable("SYS_Statut", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.USR.USR_Competence", b =>
@@ -329,7 +329,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CompetenceCategoryId");
 
-                    b.ToTable("USR_Competence");
+                    b.ToTable("USR_Competence", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.USR.USR_Contact", b =>
@@ -356,7 +356,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("USR_Contact");
+                    b.ToTable("USR_Contact", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.USR.USR_Experience", b =>
@@ -393,7 +393,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("USR_Experience");
+                    b.ToTable("USR_Experience", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.USR.USR_Project", b =>
@@ -440,7 +440,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("USR_Project");
+                    b.ToTable("USR_Project", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.DAO.INT.INT_ProjectImage", b =>
