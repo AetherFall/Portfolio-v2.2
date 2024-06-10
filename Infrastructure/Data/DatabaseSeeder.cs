@@ -30,19 +30,25 @@ public static class DatabaseSeeder
             {
                 Name = "En cours", 
                 IsStarted = true, 
-                IsFinished = false
+                IsFinished = false,
+                BackgroundColor = "#F8ED8C",
+                ForegroundColor = "#3E3B23"
             },
             new SYS_Statut
             {
                 Name = "Terminé", 
                 IsStarted = true, 
-                IsFinished = true
+                IsFinished = true,
+                BackgroundColor = "#0EE6B8",
+                ForegroundColor = "#233E39"
             },
             new SYS_Statut
             {
                 Name = "Prochainement", 
                 IsStarted = false, 
-                IsFinished = false
+                IsFinished = false,
+                BackgroundColor = "#F68CF8",
+                ForegroundColor = "#3E233E"
             }
         };
         

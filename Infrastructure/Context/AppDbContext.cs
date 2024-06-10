@@ -17,13 +17,13 @@ public class AppDbContext : DbContext
         optionsBuilder.UseMySql(new MariaDbServerVersion(new Version(11, 3)));
     }
 
-    public DbSet<INT_CompetenceCategory> INT_CompetenceCategory { get; set; } = null!;
+    public DbSet<INT_CompetenceCategory?> INT_CompetenceCategory { get; set; } = null!;
     public DbSet<INT_ProjectImage> INT_ProjectImage { get; set; } = null!;
     public DbSet<INT_ProjectLangage> INT_ProjectLangage { get; set; } = null!;
     public DbSet<INT_ProjectLink> INT_ProjectLink { get; set; } = null!;
     public DbSet<INT_ProjetAPI> INT_ProjetAPI { get; set; } = null!;
-    public DbSet<PRO_Company> PRO_Company { get; set; } = null!;
-    public DbSet<SYS_API> SYS_API { get; set; } = null!;
+    public DbSet<PRO_Company?> PRO_Company { get; set; } = null!;
+    public DbSet<SYS_API?> SYS_API { get; set; } = null!;
     public DbSet<SYS_Langage> SYS_Langage { get; set; } = null!;
     public DbSet<SYS_NavBar> SYS_NavBar { get; set; } = null!;
     public DbSet<SYS_Settings> SYS_Settings { get; set; } = null!;

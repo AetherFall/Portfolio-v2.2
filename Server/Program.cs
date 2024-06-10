@@ -1,8 +1,10 @@
+using System.Reflection;
 using Infrastructure.Context;
 using Infrastructure.Data;
 using Infrastructure.Settings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +23,7 @@ builder.Services.AddSwaggerGen( options =>
         Description = "API pour le portfolio 2024",
         Contact = new OpenApiContact
         {
-            Name = "Joingnez-moi par courriel",
+            Name = "- joingnez-moi par courriel",
             Email = "william-b.lambert@pm.me"
         },
         License = new OpenApiLicense
@@ -33,7 +35,7 @@ builder.Services.AddSwaggerGen( options =>
 );
 
 builder.Services.Scan(scan => scan
-    .FromApplicationDependencies(app => app.FullName.StartsWith("Application") || app.FullName.StartsWith("Infrastructure"))
+    .FromApplicationDependencies(app => app.FullName.StartsWith("Application") || app.FullName.StartsWith("Infrastructure") || app.FullName.StartsWith("Domain"))
     .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
     .AsImplementedInterfaces()
     .WithTransientLifetime()
@@ -41,8 +43,11 @@ builder.Services.Scan(scan => scan
     .AsImplementedInterfaces()
     .WithTransientLifetime());
 
+
 // Configurer la base de données
 builder.Services.AddDatabase(builder.Configuration);
+builder.Services.AddTelemetry(builder.Host);
+builder.Services.ConfigureMappers();
 
 var app = builder.Build();
 
@@ -58,6 +63,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
